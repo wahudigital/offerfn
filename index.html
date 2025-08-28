@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create Website Offer – Only ₹199 | Wahu</title>
+  <meta name="description" content="Limited‑time 1 to 1K subscriber offer: get a ready‑to‑use personal website for only ₹199. We handle planning, design, content setup, SEO basics, mobile optimization, domain/hosting config & final upload." />
+  <style>
+    :root{
+      --bg:#0b1020;          /* deep navy */
+      --card:#111831;        /* card surface */
+      --muted:#7c86a2;       /* muted text */
+      --text:#f1f5ff;        /* primary text */
+      --brand:#6ee7b7;       /* mint accent */
+      --brand-2:#60a5fa;     /* blue accent */
+      --warning:#fbbf24;     /* gold */
+      --danger:#fb7185;      /* pink/red */
+      --ok:#34d399;          /* green */
+      --ring: 0 0 0 3px rgba(110,231,183,.35);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family: Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"; background:linear-gradient(180deg,#0b1020,#0b1020 40%,#0e1530); color:var(--text);}
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(96,165,250,.18);border:1px solid rgba(96,165,250,.35);padding:6px 12px;border-radius:999px;color:#dbeafe;font-size:12px;letter-spacing:.4px}
+    .grid{display:grid;gap:18px}
+    .hero{display:grid;gap:14px;padding:28px;border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);background:radial-gradient(1000px 400px at 80% -30%,rgba(110,231,183,.15),transparent),radial-gradient(1200px 700px at -20% 120%,rgba(96,165,250,.12),transparent),var(--card);box-shadow:var(--shadow)}
+    .hero h1{font-size:clamp(30px,4vw,44px);margin:10px 0 0;line-height:1.1}
+    .hero p{margin:0;color:var(--muted)}
+    .price{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:6px}
+    .price .now{font-size:clamp(28px,4vw,40px);font-weight:800;color:var(--brand)}
+    .price .off{font-size:14px;color:#cffafe;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);padding:4px 10px;border-radius:999px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .btn{appearance:none;border:0;cursor:pointer;padding:12px 18px;border-radius:12px;font-weight:700;letter-spacing:.2px;display:inline-flex;gap:10px;align-items:center;justify-content:center;transition:transform .08s ease,box-shadow .2s ease,opacity .2s}
+    .btn:active{transform:translateY(1px)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#071018}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.18);color:#e2e8f0}
+    .btn.link{background:transparent;color:var(--brand);padding:0}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:999px;border:1px dashed rgba(255,255,255,.26);color:#d1fae5}
+
+    section{margin:30px 0}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .list{display:grid;gap:10px;margin:0;padding:0}
+    .list li{list-style:none;display:flex;gap:10px;align-items:flex-start}
+
+    .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .kpi .item{background:linear-gradient(180deg,rgba(255,255,255,.04),transparent);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px}
+    .kpi b{font-size:24px}
+
+    .steps{counter-reset: step}
+    .steps .step{position:relative;padding-left:44px;margin:16px 0}
+    .steps .step::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;inline-size:34px;block-size:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand-2),var(--brand));display:grid;place-items:center;color:#081223;font-weight:800}
+
+    .two-col{display:grid;gap:18px;grid-template-columns:1fr}
+    @media(min-width:900px){.two-col{grid-template-columns:1fr 1fr}}
+
+    .form{display:grid;gap:14px}
+    .field{display:grid;gap:6px}
+    .field label{color:#cbd5e1;font-size:14px}
+    .field input,.field select,.field textarea{background:#0a1228;border:1px solid rgba(255,255,255,.12);border-radius:12px;color:var(--text);padding:12px;outline:none}
+    .field input:focus,.field select:focus,.field textarea:focus{box-shadow:var(--ring);border-color:rgba(110,231,183,.6)}
+    .inline{display:flex;gap:10px;flex-wrap:wrap}
+
+    .notice{display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(16,185,129,.08)}
+    .small{font-size:12px;color:var(--muted)}
+
+    .qr{display:grid;place-items:center;inline-size:180px;block-size:180px;border-radius:16px;background:repeating-linear-gradient(45deg,#0f172a 0 14px,#0b1020 14px 28px);border:1px solid rgba(255,255,255,.18);position:relative}
+    .qr::after{content:"QR";position:absolute;inset:auto auto 10px 10px;font-weight:800;color:#93c5fd;letter-spacing:2px}
+
+    footer{margin:40px 0 20px;color:var(--muted);text-align:center}
+    .hidden{display:none}
+    .success{border:1px solid rgba(16,185,129,.45);background:rgba(16,185,129,.12)}
+
+    .floating-help{position:fixed;right:18px;bottom:18px;display:inline-flex;gap:10px;align-items:center;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#06221a;border-radius:999px;padding:10px 14px;box-shadow:var(--shadow);text-decoration:none;font-weight:700}
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="hero">
+      <span class="badge" title="Limited time offer">
+        <!-- spark icon -->
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l1.9 4.7L19 8.6l-4.3 2.6L13.9 16 12 11.3 10.1 16l-.8-4.8L5 8.6l5.1-1.9L12 2z" stroke="#bfdbfe"/></svg>
+        LIMITED TIME • 1 to 2K SUBSCRIBERS
+      </span>
+      <h1>CREATE WEBSITE — Subscriber Offer</h1>
+      <p>Personal website delivered ready to use. <strong>End‑to‑end managed</strong>: planning, design, content setup, mobile optimization, domain/hosting configuration & final upload.</p>
+      <div class="price">
+        
+        <div class="now" style="font-size: 21px;">BASIC PERSONAL WEBSITE ONLY <strong style="color: orangered;">₹499</strong>/</div>
+        AND
+         <div class="now" style="font-size: 21px;">PRO PERSONAL WEBSITE ONLY <strong style="color: orangered;">₹999</strong>/</div>
+        <div class="off">95% OFF</div>
+        <span class="pill" title="Personal website required">Personal website required</span>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="#order">Create Website – Click here</a>
+        <a class="btn secondary" href="#how">How it works</a>
+        <a class="btn link" href="http://youtube.com" target="_blank" rel="noopener">Open YouTube ▶</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h2 style="margin:0 0 6px">What you get</h2>
+      <p class="small">We manage the complete process end‑to‑end and deliver a website that’s ready to use.</p>
+      <div class="kpi" style="margin-top:12px">
+        <div class="item"><b>✔️</b><div>Planning & design</div></div>
+        <div class="item"><b>✔️</b><div>Content setup</div></div>
+        <div class="item"><b>✔️</b><div>Mobile optimization</div></div>
+        <div class="item"><b>✔️</b><div>Domain & hosting config</div></div>
+        <div class="item"><b>✔️</b><div>Final upload</div></div>
+      </div>
+      <div class="notice" style="margin-top:14px">
+        <!-- note icon -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="#6ee7b7"/><path d="M12 7v2m0 3v5" stroke="#6ee7b7"/></svg>
+        <div>
+          <strong>Note:</strong> Your website will be delivered ready to use. Delivery typically within <b>2–3 days</b> after verification.
+        </div>
+      </div>
+    </section>
+
+    <section id="requirements" class="two-col">
+      <div class="card">
+        <h3 style="margin-top:0">Information we’ll ask from you</h3>
+        <ul class="list">
+          <li>✅ Free domain (e.g., <i>www.exexample.com</i>) — included</li>
+          <li>✅ Website Name / Title</li>
+          <li>✅ Preferred Type (Portfolio, Blog, etc.)</li>
+          <li>✅ Website Content</li>
+          <li>✅ About You / About Business</li>
+          <li>✅ Services or Products List</li>
+          <li>✅ Images or Logo</li>
+          <li>✅ Social media links (Facebook, Instagram, YouTube, etc.)</li>
+          <li>✅ Design preferences (color theme, layout style: simple / modern / professional)</li>
+          <li>✅ Templates available ✓</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Fast eligibility checklist</h3>
+        <ul class="list">
+          <li>📺 Subscribed to <b>Wahu</b> on YouTube</li>
+          <li>👍 Liked & shared the promo video</li>
+          <li>💬 Commented <b>“Sent Offer”</b> on the video</li>
+        </ul>
+        <div class="cta" style="margin-top:8px">
+          <a class="btn secondary" href="http://youtube.com" target="_blank" rel="noopener">Do the steps on YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="card">
+      <h2 style="margin:0 0 10px">How to get the offer (Step‑by‑Step)</h2>
+      <div class="steps">
+        <div class="step">Go to the YouTube link: <a href="http://youtube.com" target="_blank" rel="noopener">youtube.com</a>.</div>
+        <div class="step">Subscribe to the <b>Wahu</b> YouTube channel.</div>
+        <div class="step">Like and share the video.</div>
+        <div class="step">Comment <b>“Sent Offer”</b> on the video.</div>
+        <div class="step ok">✅ Once complete, you’re eligible for the offer — only <b>₹499 or ₹999</b>!</div>
+      </div>
+    </section>
+
+    <section id="order" class="card">
+      <h2 style="margin:0 0 8px">Order your website</h2>
+      <p class="small">Follow the flow below. Your details are used solely to verify your subscriber status and build your website.</p>
+
+      <div class="two-col">
+        <!-- LEFT: multi-step form -->
+        <div class="card" style="padding:18px">
+          <div id="flow-1" class="flow">
+            <h3 style="margin-top:0">Step 1 — Subscriber Verification</h3>
+            <form id="verifyForm" class="form" autocomplete="on">
+              <div class="field">
+                <label for="ytEmail">YouTube email</label>
+                <input id="ytEmail" name="ytEmail" type="email" placeholder="name@example.com" required />
+              </div>
+              <div class="field">
+                <label for="ytUser">YouTube username</label>
+                <input id="ytUser" name="ytUser" type="text" placeholder="@yourhandle" required />
+              </div>
+              <button type="submit" class="btn primary">Verify & Continue</button>
+            </form>
+          </div>
+
+          <div id="flow-2" class="flow hidden">
+            <h3 style="margin-top:0">Step 2 — Create Your Website</h3>
+            <form id="detailsForm" class="form">
+              <div class="field">
+                <label for="siteTitle">Website Name / Title</label>
+                <input id="siteTitle" name="siteTitle" type="text" placeholder="e.g., Wahu — Digital Portfolio" required />
+              </div>
+              <div class="field">
+                <label for="siteType">Preferred Website Type</label>
+                <select id="siteType" name="siteType" required>
+                  <option value="">Select…</option>
+                  <option>Portfolio</option>
+                  <option>Blog</option>
+                  <option>Personal</option>
+                  <option>Advanced Personal </option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="content">Website Content / Notes</label>
+                <textarea id="content" name="content" rows="4" placeholder="About you / About business, services, sections, any links…" required></textarea>
+              </div>
+              <div class="inline">
+                <div class="field" style="min-width:220px;flex:1">
+                  <label for="color">Preferred color theme</label>
+                  <input id="color" name="color" type="text" placeholder="e.g., Mint & Navy" />
+                </div>
+                <div class="field" style="min-width:220px;flex:1">
+                  <label for="layout">Layout style</label>
+                  <select id="layout" name="layout">
+                    <option>Modern</option>
+                    <option>Simple</option>
+                    
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="social">Social links</label>
+                <input id="social" name="social" type="text" placeholder="Facebook, Instagram, YouTube, etc." />
+              </div>
+              <div class="field">
+                <label for="assets">Give me your WhatsApp No.</label>
+                <input id="assets" name="assets" type="text" placeholder="WhatsApp no." />
+              </div>
+              <button type="submit" class="btn primary">Proceed to Upload & Payment</button>
+            </form>
+          </div>
+
+          <div id="flow-3" class="flow hidden">
+            <h3 style="margin-top:0">Step 3 — Upload & Pay ₹10</h3>
+            <form id="uploadForm" class="form">
+              <div class="field">
+                <label for="email">Your email (for delivery)</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="field">
+                <label for="pass">Set a portal password</label>
+                <input id="pass" name="pass" type="password" placeholder="Create a password" minlength="6" required />
+                <div class="small">Used only to access your order status/attachments. Don’t reuse important passwords.</div>
+              </div>
+
+              <div class="inline" style="align-items:center">
+                <div class="" aria-label="Payment QR placeholder" title="Scan to pay ₹10" style="width: 150px;">
+                <img src="qr code.jpg" alt="QR Code" 
+                 style="width:170px; height:auto; border:2px solid #000; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.3);">
+
+                </div>
+                <div>
+                  <div><b>Scan & pay registration fee ₹10</b></div>
+                  <div class="small">UPI / Wallet supported. After payment, upload your screenshot below.</div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="proof">Upload payment screenshot</label>
+                <input id="proof" name="proof" type="file" accept="image/*" required />
+              </div>
+
+              <div class="inline">
+                <label class="small"><input type="checkbox" required /> I confirm I’ve completed the YouTube steps.</label>
+                <label class="small"><input type="checkbox" required /> I agree to the 2–3 day delivery window after verification.</label>
+              </div>
+
+              <button type="submit" class="btn primary">Submit Order</button>
+            </form>
+          </div>
+
+          <div id="flow-4" class="flow hidden">
+            <div class="notice success">
+              <!-- check icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#34d399" stroke-width="2"/></svg>
+              <div>
+                <h3 style="margin:0">Successful Completion</h3>
+                <p class="small" style="margin:.4rem 0 0">We’ll verify your form & payment. Once approved, you’ll receive a WhatsApp confirmation and your website will be delivered within <b>2–3 days</b>.</p>
+              </div>
+            </div>
+            <div class="cta" style="margin-top:14px">
+              <a class="btn secondary" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: quick steps summary -->
+        <aside class="card" style="padding:18px">
+          <h3 style="margin-top:0">Quick order checklist</h3>
+          <ol class="list" style="gap:8px">
+            <li>Open the video & finish YouTube steps</li>
+            <li>Fill Subscriber Verification form</li>
+            <li>Fill Create Your Website form</li>
+            <li>Scan QR, pay registration fee ₹10 & upload screenshot</li>
+            <li>Get WhatsApp confirmation</li>
+          </ol>
+          <div class="cta">
+            <a class="btn secondary" href="http://youtube.com" target="_blank" rel="noopener">Open YouTube</a>
+            <a class="btn primary" href="#order">Start Order</a>
+          </div>
+          <hr style="border-color:rgba(255,255,255,.08);margin:16px 0">
+          <p class="small">Need help? Chat with us on WhatsApp after you submit the form. We’ll reach out on approval.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 style="margin:0 0 8px">FAQs</h2>
+      <details>
+        <summary>What does “ready to use” include?</summary>
+        <p class="small">A functional website with your content, mobile‑optimized pages, and a configured domain/hosting. We handle the technical setup and upload.</p>
+      </details>
+      <details>
+        <summary>What if I don’t have content yet?</summary>
+        <p class="small">Share rough points. Our team will arrange them cleanly on your site. You can request minor tweaks after delivery.</p>
+      </details>
+      <details>
+        <summary>How fast is delivery?</summary>
+        <p class="small">Typically within 2–3 days after we verify your subscriber status and payment.</p>
+      </details>
+      <details>
+        <summary>Can I choose a design?</summary>
+        <p class="small">Yes—pick a color theme and layout style (simple, modern, or professional). Templates are available.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div>© <span id="year"></span> Wahu. All rights reserved.</div>
+  </footer>
+
+  <a class="floating-help" href="#order" title="Create Website — ₹199">
+    <!-- lightning icon -->
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7z" stroke="#052e2b"/></svg>
+    Click here — ₹499 or ₹999
+  </a>
+
+  <script>
+  const $ = (s, p=document) => p.querySelector(s);
+  const show = id => {
+    document.querySelectorAll('.flow').forEach(el=>el.classList.add('hidden'));
+    $(id).classList.remove('hidden');
+    setTimeout(()=>document.getElementById('order').scrollIntoView({behavior:'smooth'}), 50);
+  };
+
+  // Store collected data across steps
+  const orderData = {};
+
+  // Step 1 form
+  $('#verifyForm').addEventListener('submit', e => {
+    e.preventDefault();
+    orderData.ytEmail = $('#ytEmail').value.trim();
+    orderData.ytUser  = $('#ytUser').value.trim();
+    show('#flow-2');
+  });
+
+  // Step 2 form
+  $('#detailsForm').addEventListener('submit', e => {
+    e.preventDefault();
+    orderData.siteTitle = $('#siteTitle').value.trim();
+    orderData.siteType  = $('#siteType').value;
+    orderData.content   = $('#content').value.trim();
+    orderData.color     = $('#color').value.trim();
+    orderData.layout    = $('#layout').value;
+    orderData.social    = $('#social').value.trim();
+    orderData.assets    = $('#assets').value.trim();
+    show('#flow-3');
+  });
+
+  // Step 3 form (final submit with file)
+  $('#uploadForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    orderData.email = $('#email').value.trim();
+    orderData.pass  = $('#pass').value;
+
+    const proofFile = $('#proof').files[0];
+    const formData = new FormData();
+
+    // Append text fields
+    for (const [k, v] of Object.entries(orderData)) {
+      formData.append(k, v);
+    }
+    // Append file
+    if (proofFile) {
+      formData.append('proof', proofFile);
+    }
+
+    try {
+    const res = await fetch("https://offer-n91a.onrender.com/api/submit-order", {
+  method: "POST",
+  body: formData
+});
+
+
+
+      if (!res.ok) {
+        throw new Error(`Server responded ${res.status}`);
+      }
+
+      const data = await res.json();
+      if (data.ok) {
+        show('#flow-4');
+      } else {
+        alert('Error: ' + (data.error || 'Something went wrong.'));
+      }
+    } catch (err) {
+      console.error('Submit error:', err);
+      alert('Success your application.');
+    }
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+
