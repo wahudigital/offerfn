@@ -34,7 +34,7 @@
 
   // Load orders list
   async function load(){
-    const res = await fetch('https://offer-n91a.onrender.com/api/admin/orders', {
+    const res = await fetch('https://offer-n91a.onrender.com/admin/orders', {
       headers: { 'Authorization': AUTH }
     });
     if (!res.ok) {
@@ -64,7 +64,7 @@
 
   // Load order detail
   async function view(id){
-    const res = await fetch('https://offer-n91a.onrender.com/api/admin/orders/' + id, {
+    const res = await fetch('https://offer-n91a.onrender.com/admin/orders/' + id, {
       headers: { 'Authorization': AUTH }
     });
     if (!res.ok) {
@@ -91,4 +91,5 @@
 </script>
 </body>
 </html>
+
 
